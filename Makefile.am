@@ -6,6 +6,9 @@ bin_SCRIPTS = startlxde lxde-logout openbox-lxde
 xsessiondir=$(xsesspath)
 xsession_DATA = LXDE.desktop
 
+portalsdir=$(datadir)/xdg-desktop-portal
+portals_DATA=lxde-portals.conf
+
 defaultsdir=$(sysconfdir)/xdg/lxsession/LXDE
 defaults_DATA = autostart desktop.conf
 
@@ -44,6 +47,7 @@ EXTRA_DIST = \
 	autostart \
 	desktop.conf \
 	LXDE.desktop.in.in \
+	$(portals_DATA) \
 	$(desktop_in_files) \
 	startlxde.in \
 	$(wallpapers_DATA) \
